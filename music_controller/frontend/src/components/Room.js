@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { Grid, Button, Typography } from "@material-ui/core";
+import {
+  Grid,
+  Button,
+  Typography,
+  responsiveFontSizes,
+} from "@material-ui/core";
 import CreateRoomPage from "./CreateRoomPage";
 
 export default class Room extends Component {
