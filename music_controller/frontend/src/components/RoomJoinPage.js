@@ -49,6 +49,7 @@ export default class RoomJoinPage extends Component {
       </Grid>
     );
   }
+
   handleTextFieldChange(e) {
     this.setState({
       roomCode: e.target.value,
