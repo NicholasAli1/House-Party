@@ -30,7 +30,7 @@ export default class HomePage extends Component {
       });
   }
 
-  rederHomePage() {
+  renderHomePage() {
     return (
       <Grid container spacing={3}>
         <Grid item xs={12} align="center">
@@ -39,7 +39,7 @@ export default class HomePage extends Component {
           </Typography>
         </Grid>
         <Grid item xs={12} align="center">
-          <ButtonGroup variant="contained" color="primary">
+          <ButtonGroup disableElevation variant="contained" color="primary">
             <Button color="primary" to="/join" component={Link}>
               Join a Room
             </Button>
@@ -67,12 +67,12 @@ export default class HomePage extends Component {
             path="/"
             render={() => {
               return this.state.roomCode ? (
-                <Redirect to={"/room/${this.state.roomCode}"} />
+                <Redirect to={`/room/${this.state.roomCode}`} />
               ) : (
-                this.rederHomePage()
+                this.renderHomePage()
               );
             }}
-          ></Route>
+          />
           <Route path="/join" component={RoomJoinPage} />
           <Route path="/create" component={CreateRoomPage} />
           <Route
